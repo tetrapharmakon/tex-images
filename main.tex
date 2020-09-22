@@ -3,6 +3,9 @@
 \usepackage
   { tikz-cd
   , graphicx
+  , amsmath
+  , amssymb
+  , amsfonts
   , xcolor
   , commutative-diagrams
   }
@@ -10,9 +13,8 @@
 
 \begin{document}
 \begin{tikzcd}
-  A \ar[r] & B
+Ti \ar[dd, "Tf"']\ar[dr, "t_i"]\ar[drr, bend left, " z_i"]& \\ 
+{} \ar[r, phantom, "\Rightarrow" description]& \text{lbcolim } T\ar[r, "\bar z"] & E \\ 
+T_j\ar[ur, "t_j"']\ar[urr, bend right, "z_j"']
 \end{tikzcd}
-\xymatrix{
-  A \ar[r] & B
-}
 \end{document}

@@ -1,3 +1,3 @@
 all:
 	latexmk -pdf main
-	convert -density 350 -flatten -quality 250 main.pdf main.png
+	convert -density 200 -flatten -quality 200 main.pdf main.png
