@@ -13,8 +13,9 @@
 
 \begin{document}
 \begin{tikzcd}
-Ti \ar[dd, "Tf"']\ar[dr, "t_i"]\ar[drr, bend left, " z_i"]& \\ 
-{} \ar[r, phantom, "\Rightarrow" description]& \text{lbcolim } T\ar[r, "\bar z"] & E \\ 
-T_j\ar[ur, "t_j"']\ar[urr, bend right, "z_j"']
+	\mathcal{C}\otimes\mathcal{D}(V\odot (C,D),(C',D')) \ar[d]& \mathcal{C}\otimes\mathcal{D}((V\odot C, V\odot D),(C',D'))\ar[d]\\
+	\mathcal{V}(V,\mathcal{C}\otimes\mathcal{D}((C,D), (C',D')))\ar[d] & \mathcal{C}(V\odot C, C')\otimes \mathcal{D}(V\odot D,D')\ar[d]\\
+	\mathcal{V}(V,\mathcal{C}(C,C')\otimes \mathcal{D}(D,D')) & \mathcal{V}(V,\mathcal C(C,C'))\otimes\mathcal{V}(V,\mathcal D(D,D'))
 \end{tikzcd}
 \end{document}
+
