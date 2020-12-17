@@ -10,12 +10,12 @@
   , commutative-diagrams
   }
 \usepackage[all,2cell]{xy}\UseAllTwocells
-
+\def\uhom{\underline{\hom}}
 \begin{document}
 \begin{tikzcd}
-	\mathcal{C}\otimes\mathcal{D}(V\odot (C,D),(C',D')) \ar[d]& \mathcal{C}\otimes\mathcal{D}((V\odot C, V\odot D),(C',D'))\ar[d]\\
-	\mathcal{V}(V,\mathcal{C}\otimes\mathcal{D}((C,D), (C',D')))\ar[d] & \mathcal{C}(V\odot C, C')\otimes \mathcal{D}(V\odot D,D')\ar[d]\\
-	\mathcal{V}(V,\mathcal{C}(C,C')\otimes \mathcal{D}(D,D')) & \mathcal{V}(V,\mathcal C(C,C'))\otimes\mathcal{V}(V,\mathcal D(D,D'))
+\mathcal C\ar[drr,bend left, "L"]\ar[ddr,bend right, "R"']\ar[dashed, dr, "G" description]&& \\
+  & F_B \ar[r]\ar[d]& \mathbf{Span}_* \ar[d, "U"]\\ 
+& F\ar[r, "N^\sharp"'] & \mathbf{Span}
 \end{tikzcd}
 \end{document}
 
