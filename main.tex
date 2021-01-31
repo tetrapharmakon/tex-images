@@ -1,4 +1,4 @@
-\documentclass{standalone}
+\documentclass[margin=1mm]{standalone}
 
 \usepackage
   { tikz-cd
@@ -11,11 +11,28 @@
   }
 \usepackage[all,2cell]{xy}\UseAllTwocells
 \def\uhom{\underline{\hom}}
+
+\usetikzlibrary{decorations.markings}
+\tikzset{mid vert/.style={/utils/exec=\tikzset{every node/.append style={outer sep=0.8ex}},
+			postaction=decorate,decoration={markings,
+					mark=at position 0.5 with {\draw[-] (0,#1) -- (0,-#1);}}},
+	mid vert/.default=0.75ex}
+%--
+\DeclareRobustCommand{\proarrow}{%
+	\mathrel{
+		\mkern-15.25mu
+		\begin{tikzcd}[row sep=2.7em, column sep=1.35em, ampersand replacement=\&]
+			{}
+			%\arrow[r, "\mapstochar", pos=0.45, outer sep=-3.0pt] \&
+			\arrow[r, mid vert] \&
+			{}
+		\end{tikzcd}
+		\mkern-16.25mu
+	}
+}
+\let\pto\proarrow
+
 \begin{document}
-\begin{tikzcd}
-\mathcal C\ar[drr,bend left, "L"]\ar[ddr,bend right, "R"']\ar[dashed, dr, "G" description]&& \\
-  & F_B \ar[r]\ar[d]& \mathbf{Span}_* \ar[d, "U"]\\ 
-& F\ar[r, "N^\sharp"'] & \mathbf{Span}
-\end{tikzcd}
+$[\mathcal{A},\mathsf{Set}](\mathcal{A}(A,-),F)\cong FA$
 \end{document}
 
