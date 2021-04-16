@@ -31,8 +31,12 @@
 	}
 }
 \let\pto\proarrow
-
+\def\r{\text{r}}
+\def\leib#1#2{\partial #1 \otimes #2 + #1 \otimes \partial #2}
 \begin{document}
-$[\mathcal{A},\mathsf{Set}](\mathcal{A}(A,-),F)\cong FA$
+\xymatrix{
+&E\ar[dr]\ar[dl]& \\
+S(X\rhd M,X\rhd M)\ar[d] && S(M,M) \ar[d]\\
+S(X^*\rhd (X\rhd M),M) \ar[rr]&& S((X^*\otimes X)\rhd M,M)
+}
 \end{document}
-
