@@ -30,13 +30,14 @@
 		\mkern-16.25mu
 	}
 }
+
+\def\bbP{\mathbb{P}}
 \let\pto\proarrow
 \def\r{\text{r}}
 \def\leib#1#2{\partial #1 \otimes #2 + #1 \otimes \partial #2}
 \begin{document}
 \xymatrix{
-&E\ar[dr]\ar[dl]& \\
-S(X\rhd M,X\rhd M)\ar[d] && S(M,M) \ar[d]\\
-S(X^*\rhd (X\rhd M),M) \ar[rr]&& S((X^*\otimes X)\rhd M,M)
+&& \prod_I \bbP \ar[d] \ar[r]^-N & \sf Set \\
+\bbP^{(J)} \ar@{^{(}->}[r] &\prod_J \bbP \ar[r]_-{\Pi M_j} & \prod_J{\sf Set} \ar[ur]_{\bar N}
 }
 \end{document}
