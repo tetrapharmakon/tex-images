@@ -1,4 +1,5 @@
-\documentclass[margin=3mm]{standalone}
+\documentclass
+  {standalone}
 
 \usepackage
   { tikz-cd
@@ -30,13 +31,18 @@
 		\mkern-16.25mu
 	}
 }
-
+\def\mod{\text{Mod}}
 \def\bbP{\mathbb{P}}
 \let\pto\proarrow
 \def\r{\text{r}}
 \def\leib#1#2{\partial #1 \otimes #2 + #1 \otimes \partial #2}
 \begin{document}
 \xymatrix{
-
+	&E=R_0pE\ar[dr]^{R_1g}\ar[dl]_f& \\
+Z \ar@[red][rr]&& X
+}\qquad
+\xymatrix{
+	&pE\ar[dr]\ar[dl]_{pf}& \\
+pZ \ar@[red][rr]&& pX
 }
 \end{document}

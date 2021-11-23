@@ -4,3 +4,5 @@ all:
 	bash -c "imgur main.png"
 p:
 	latexmk -pdf -pvc main
+t:
+	latexmk -pdf main
